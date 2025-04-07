@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Luxury Villa for Sale</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/modern-apartment.css">
+</head>
+<body>
+    <header class="fixed-top">
+        <nav class="navbar navbar-expand-lg">
+            <div class="container">
+                <a class="navbar-brand" href="index.html">
+                    <img src="../Pictures/LOGO2.png" alt="Logo">
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav mx-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" href="index.html">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="luxury-villa.html">Luxury Villa</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="modern-apartment.html">Modern Apartment</a>
+                        </li>
+                    </ul>
+                    <div class="auth-buttons">
+                        <a href="login.html" class="btn btn-primary me-2">Log In</a>
+                        <a href="signup.html" class="btn btn-primary">Sign Up</a>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <div class="main-content">
+        <div class="image-gallery">
+            <img src="../Pictures/modern-apartment-1.jpg" class="gallery-image active" alt="Luxury Villa Interior">
+            <img src="../Pictures/modern-apartment-2.jpg" class="gallery-image" alt="Villa Pool Area">
+            <img src="../Pictures/modern-apartment-3.jpg" class="gallery-image" alt="Villa Living Room">
+            <img src="../Pictures/modern-apartment-4.jpg" class="gallery-image" alt="Villa Entrance">
+            
+            <button class="gallery-nav gallery-prev">
+                <i class="bi bi-chevron-left"></i>
+            </button>
+            <button class="gallery-nav gallery-next">
+                <i class="bi bi-chevron-right"></i>
+            </button>
+            
+            <div class="gallery-dots">
+                <button class="gallery-dot active" data-index="0"></button>
+                <button class="gallery-dot" data-index="1"></button>
+                <button class="gallery-dot" data-index="2"></button>
+                <button class="gallery-dot" data-index="3"></button>
+            </div>
+        </div>
+
+        <div class="property-info">
+            <div class="property-title">
+                <i class="bi bi-house-door home-icon"></i>
+                <h1>Luxury Villa for Sale – Modern Design & Prime Location!</h1>
+            </div>
+            
+            <div class="info-grid">
+                <div class="property-details">
+                    <div class="detail-item">
+                        <i class="bi bi-geo-alt detail-icon"></i>
+                        <span>Location: [Add location here]</span>
+                    </div>
+                    <div class="detail-item">
+                        <i class="bi bi-cash detail-icon"></i>
+                        <span>Price: $2,000,000</span>
+                    </div>
+                    <div class="detail-item">
+                        <i class="bi bi-rulers detail-icon"></i>
+                        <span>Size: 800 sqm</span>
+                    </div>
+                    <div class="detail-item">
+                        <i class="bi bi-door-closed detail-icon"></i>
+                        <span>Bedrooms: 5</span>
+                    </div>
+                    <div class="detail-item">
+                        <i class="bi bi-droplet detail-icon"></i>
+                        <span>Bathrooms: 6</span>
+                    </div>
+                    <div class="detail-item">
+                        <i class="bi bi-tree detail-icon"></i>
+                        <span>Garden: Yes + size:100</span>
+                    </div>
+                    <div class="detail-item">
+                        <i class="bi bi-water detail-icon"></i>
+                        <span>Swimming Pool: Yes</span>
+                    </div>
+                    <div class="detail-item">
+                        <i class="bi bi-car-front detail-icon"></i>
+                        <span>Parking: Fits 4 cars</span>
+                    </div>
+                </div>
+                
+                <div class="property-description">
+                    <div class="description-title">
+                        <i class="bi bi-info-circle"></i>
+                        <h2>Villa Description:</h2>
+                    </div>
+                    <p>A stunning villa with a modern design, located in a quiet and upscale neighborhood. Featuring spacious rooms, natural lighting, a fully equip kitchen, and a private garden perfect for families. The villa offers breathtaking views, high-end finishes, and modern amenities to ensure a luxurious and comfortable lifestyle.</p>
+                    <p><i class="bi bi-telephone"></i> For more details or to schedule a viewing, contact us now!</p>
+                </div>
+            </div>
+
+            <button class="buy-button" onclick="openPaymentModal('../Pictures/modern-apartment-1.jpg', 'Modern Apartment', '$800,000')">BUY</button>
+        </div>
+    </div>
+
+    <div class="payment-modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3>Complete Your Purchase</h3>
+                <button class="close-btn">&times;</button>
+            </div>
+            <div class="modal-body">
+                <div class="property-summary">
+                    <img id="property-image" src="" alt="Property Image">
+                    <div class="property-details">
+                        <h4 id="property-title"></h4>
+                        <p id="property-price"></p>
+                    </div>
+                </div>
+                <form id="payment-form">
+                    <div class="form-group">
+                        <label for="card-number">Card Number</label>
+                        <input type="text" id="card-number" placeholder="1234 5678 9012 3456" maxlength="19" required>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="expiry">Expiry Date</label>
+                            <input type="text" id="expiry" placeholder="MM/YY" maxlength="5" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="cvv">CVV</label>
+                            <input type="text" id="cvv" placeholder="123" maxlength="3" required>
+                        </div>
+                    </div>
+                    <button type="submit" class="pay-btn">Pay Now</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="../js/modern-apartment.js"></script>
+
+</body>
+</html>
