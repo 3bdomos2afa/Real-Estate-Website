@@ -1,0 +1,223 @@
+:root {
+    --primary-color: #1a237e;
+    --secondary-color: #0d47a1;
+    --accent-color: #2962ff;
+    --text-color: #333;
+    --light-bg: #f5f5f5;
+    --dark-bg: #1a237e;
+    --transition: all 0.3s ease;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    background-color: #283ba7;
+    font-family: 'Poppins', sans-serif;
+}
+
+header {
+    background-color: rgba(255, 255, 255, 0.4);
+    backdrop-filter: blur(8px);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    padding: 0.5rem 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+}
+
+.navbar {
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+}
+
+.navbar .container {
+    max-width: 1200px;
+}
+
+.navbar-brand img {
+    height: 40px;
+    transition: transform 0.3s;
+}
+
+.navbar-brand:hover img {
+    transform: scale(1.05);
+}
+
+.navbar-nav {
+    margin: 0 auto;
+}
+
+.nav-link {
+    color: #333 !important;
+    font-weight: 500;
+    padding: 0.5rem 1rem !important;
+    transition: color 0.3s;
+    font-family: 'Poppins', sans-serif;
+    text-decoration: none;
+}
+
+.nav-link:hover {
+    color: #283ba7 !important;
+    text-decoration: none;
+}
+
+.auth-buttons {
+    display: flex;
+    gap: 0.5rem;
+}
+
+.auth-buttons .btn {
+    padding: 0.4rem 1.2rem;
+    font-size: 0.9rem;
+    border-radius: 25px;
+    transition: all 0.3s;
+    font-family: 'Poppins', sans-serif;
+}
+
+.auth-buttons .btn-primary {
+    background-color: #283ba7;
+    border-color: #283ba7;
+}
+
+.auth-buttons .btn-primary:hover {
+    background-color: #1c2a7a;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 10px rgba(40, 59, 167, 0.2);
+}
+
+.hero {
+    position: relative;
+    height: 100vh;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+}
+
+#video-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+}
+
+.hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.7));
+    z-index: -1;
+}
+
+.hero-content {
+    max-width: 800px;
+    padding: 2rem;
+    animation: fadeIn 1s ease-out;
+}
+
+.hero h1 {
+    font-size: 4rem;
+    font-weight: 700;
+    margin-bottom: 2rem;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.search-section {
+    margin: 2rem 0;
+}
+
+.search-form {
+    position: relative;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.search-input {
+    width: 100%;
+    padding: 1.2rem 2rem;
+    border: none;
+    border-radius: 50px;
+    font-size: 1.1rem;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    transition: var(--transition);
+}
+
+.search-input:focus {
+    outline: none;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+    transform: translateY(-2px);
+}
+
+.slogan {
+    margin-top: 2rem;
+}
+
+.slogan h2 {
+    font-size: 1.8rem;
+    font-weight: 500;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@media (max-width: 991px) {
+    .navbar-collapse {
+        background-color: rgba(255, 255, 255, 0.95);
+        padding: 1rem;
+        border-radius: 8px;
+        margin-top: 0.5rem;
+    }
+
+    .navbar-nav {
+        margin: 1rem 0;
+    }
+
+    .auth-buttons {
+        margin-top: 1rem;
+        text-align: center;
+    }
+}
+
+@media (max-width: 768px) {
+    .hero h1 {
+        font-size: 3rem;
+    }
+    
+    .slogan h2 {
+        font-size: 1.4rem;
+    }
+    
+    .navbar {
+        padding: 0.5rem 0;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero h1 {
+        font-size: 2.5rem;
+    }
+
+    .slogan h2 {
+        font-size: 1.2rem;
+    }
+} 

@@ -1,0 +1,30 @@
+@font-face {
+  font-display: block;
+  font-family: "bootstrap-icons";
+  src: url("./fonts/bootstrap-icons.woff2") format("woff2"),
+       url("./fonts/bootstrap-icons.woff") format("woff");
+}
+
+.bi::before,
+[class^="bi-"]::before,
+[class*=" bi-"]::before {
+  display: inline-block;
+  font-family: bootstrap-icons !important;
+  font-style: normal;
+  font-weight: normal !important;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  vertical-align: -.125em;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.bi-arrow-left::before { content: "\f12a"; }
+.bi-arrow-right::before { content: "\f12b"; }
+.bi-chevron-down::before { content: "\f282"; }
+.bi-chevron-left::before { content: "\f284"; }
+.bi-chevron-right::before { content: "\f285"; }
+.bi-chevron-up::before { content: "\f283"; }
+.bi-x::before { content: "\f62a"; }
+.bi-x-lg::before { content: "\f62b"; } 
