@@ -7,6 +7,10 @@ A multi-page real estate listing website built with plain HTML, CSS and JavaScri
 
 Live demo: https://real-estate-website-nu-seven.vercel.app
 
+## Preview
+
+![Real Estate Website home page](docs/preview.svg)
+
 ## Pages
 
 - `index.html` - home page with featured properties
